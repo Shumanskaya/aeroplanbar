@@ -1,0 +1,349 @@
+:root {
+    --primary: #D6B62B;
+    --secondary: #AFCE2A;
+    --primary-dark: #D6802B;
+    --secondary-dark: #3F2C94;
+    --color-dark: #282626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 1.1rem;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.section__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 20px;
+    /* border-bottom: 1px solid var(--primary-dark); */
+}
+
+.section__nav__title {
+    width: 30%;
+    /* text-align: center; */
+    padding-bottom: 5px;
+    color: var(--primary-dark);
+}
+
+.section__nav__title--active {
+    font-size: 1.5rem;
+    width: 50%;
+    border-bottom: 1px solid var(--primary-dark);
+}
+
+.title {
+    width: 30%;
+    font-size: 2em;
+    padding: 20px 40px;
+    color: var(--secondary-dark);
+    text-align: right;
+}
+
+.section__block {
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-dark);
+}
+
+.logo {
+    width: 30%;
+    position: relative;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.bar {
+    position: absolute;
+    right: -17%;
+    top: 70%;
+    font-size: 2.2vw;
+    color: var(--primary);
+    font-style: italic;
+}
+
+.contact {
+    width: 40%;
+    text-align: right;
+}
+
+.contact p,
+.contact a {
+    color: var(--primary);
+}
+
+/* SLIDER */
+.slider {
+    width: 100%;
+    position: relative;
+}
+
+.slider__img {
+    background-image: url(image/РазливноеПиво.JPG);
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider__img-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    filter: blur(7px);
+    z-index: -1;
+    background-image: url(image/РазливноеПиво.JPG);
+    background-size: cover;
+}
+
+/*NAV*/
+.nav {
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px;
+}
+
+.nav__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav__btn-mobile {
+    opacity: 0;
+}
+
+.nav__title {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.nav__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    opacity: 0;
+    height: 2px;
+    background-color: #3F2C94;
+    transition: all .5s ease;
+}
+
+.link {
+    color: var(--secondary-dark);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.nav__title:hover::after {
+    opacity: 1;
+}
+
+/* ABOUT */
+.about__text {
+    width: 70%;
+    margin: auto;
+}
+
+.about__text p {
+    padding-bottom: 20px;
+    color: var(--color-dark);
+    text-indent: 20px;
+}
+
+/* MENU */
+
+.menu__list {
+    margin: auto;
+    width: 70%;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 20px;
+}
+
+.menu__item:not(:last-of-type) {
+    border-bottom: 1px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+.menu__desc {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.menu__title {
+    font-size: 1.3em;
+    color: var(--secondary-dark);
+}
+
+.menu__desc-ingredients {
+    font-size: 1em;
+    font-style: italic;
+}
+
+.menu__price {
+    font-size: 1.3em;
+    margin-left: auto;
+}
+
+/* POSTER */
+.poster {
+    width: 70%;
+    margin: auto;
+}
+
+.poster__list {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+}
+
+.poster__item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--primary);
+    padding: 10px;
+    display: flex;
+}
+
+.poster__img {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.poster__title {
+    font-size: 1.3em;
+    color: var(--secondary-dark);
+    margin-bottom: 10px;
+}
+
+.poster__date {
+    font-style: italic;
+}
+
+.poster__desc {
+    padding: 10px 0;
+}
+
+/* STOCK */
+
+.stock {
+    width: 70%;
+    margin: auto;
+}
+
+.stock__desct {
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+.footer {
+    background-color: var(--secondary-dark);
+    padding: 60px;
+    width: 100%;
+}
+
+.footer .contact {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer .contact .tel a {
+    font-size: 1.5rem;
+}
+
+
+/* MOBILE */
+@media screen and (max-width : 1024px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section__block {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* HRADER */
+    .header {
+        display: block;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 50%;
+        margin: auto;
+    }
+
+    .contact {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* NAV MOBILE */
+    .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    .nav__btn-mobile {
+        opacity: 1;
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav__section {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+
+    /* FOOTER */ 
+    .footer {
+        padding: 10px;
+    }
+}
