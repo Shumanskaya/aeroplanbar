@@ -26,7 +26,7 @@
             <div class="nav__section">
                 <div class="nav__title"><a href="#about" class="link">О нас</a></div>
                 <div class="nav__title"><a href="#menu" class="link">Меню</a></div>
-                <div class="nav__title"><a href="#poster" class="link">Афиша</a></div>
+                <div class="nav__title"><a href="#event" class="link">Афиша</a></div>
                 <div class="nav__title"><a href="#photogallery" class="link">Фотографии</a></div>
                 <div class="nav__title"><a href="#stock" class="link">Акции</a></div>
                 <div class="nav__title"><a href="#contact" class="link">Контакты</a></div>
@@ -81,8 +81,8 @@
             <div class="menu__list section__block">
 
                 <div class="section__nav">
-                    <p class="section__nav__title section__nav__title--active">Горячие закуски</p>
-                    <p class="section__nav__title">Пиво</p>
+                    <p class="section__nav__title section__nav__title--active" id="food">Горячие закуски</p>
+                    <p class="section__nav__title" id="beer">Пиво</p>
                     <p class="section__nav__title">Алкоголь</p>
                     <p class="section__nav__title">Коктейли</p>
                     <p class="section__nav__title">Напитки</p>
@@ -93,63 +93,19 @@
         </div>
 
 
-        <div class="section" id="poster">
+        <div class="section" id="event">
             <h1 class="title">Афиша</h1>
 
-            <div class="poster section__block">
+            <div class="event section__block">
+
                 <div class="section__nav">
-                    <p class="section__nav__title section__nav__title--active">Январь</p>
-                    <p class="section__nav__title">Февраль</p>
-                    <p class="section__nav__title">Март</p>
+                    <p class="section__nav__title section__nav__title--active" id="january">Январь</p>
+                    <p class="section__nav__title" id="february">Февраль</p>
+                    <p class="section__nav__title" id="march">Март</p>
                 </div>
-                <div class="poster__list">
-                    <div class="poster__item">
-                        <img src="image/IMG_8696.jpg" alt="" class="poster__img">
-                        <div class="poster__detail">
-                            <p class="poster__title">Супер-пупер-крутое метроприятие!!!</p>
-                            <p class="poster__date">12.03.2024</p>
-                            <p class="poster__desc">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore exercitationem ipsum
-                                libero
-                                consequatur odio, autem minima, nihil non atque quia illo excepturi tenetur corporis
-                                quaerat
-                                facilis, iste quae nobis officiis.
-                            </p>
-                            <p class="poster__details">Вход бесплатный</p>
-                        </div>
-                    </div>
 
-                    <div class="poster__item">
-                        <img src="image/IMG_8696.jpg" alt="" class="poster__img">
-                        <div class="poster__detail">
-                            <p class="poster__title">Супер-пупер-крутое метроприятие!!!</p>
-                            <p class="poster__date">12.03.2024</p>
-                            <p class="poster__desc">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore exercitationem ipsum
-                                libero
-                                consequatur odio, autem minima, nihil non atque quia illo excepturi tenetur corporis
-                                quaerat
-                                facilis, iste quae nobis officiis.
-                            </p>
-                            <p class="poster__details">Вход бесплатный</p>
-                        </div>
-                    </div>
+                <div class="event__list">
 
-                    <div class="poster__item">
-                        <img src="image/IMG_8696.jpg" alt="" class="poster__img">
-                        <div class="poster__detail">
-                            <p class="poster__title">Супер-пупер-крутое метроприятие!!!</p>
-                            <p class="poster__date">12.03.2024</p>
-                            <p class="poster__desc">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore exercitationem ipsum
-                                libero
-                                consequatur odio, autem minima, nihil non atque quia illo excepturi tenetur corporis
-                                quaerat
-                                facilis, iste quae nobis officiis.
-                            </p>
-                            <p class="poster__details">Вход бесплатный</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -191,6 +147,18 @@
             </div>
         </template>
 
+
+        <template id="event_item">
+            <div class="event__item">
+                <img src="" alt="" class="event__img">
+                <div class="event__detail">
+                    <p class="event__title"></p>
+                    <p class="event__date"></p>
+                    <p class="event__desc"></p>
+                    <p class="event__details"></p>
+                </div>
+            </div>
+        </template>
 
         <script src="main.js"></script>
     </div>
