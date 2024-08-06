@@ -1,4 +1,6 @@
 const sectionNav = document.querySelectorAll(".section__nav");
+let date = new Date();
+let month = date.toLocaleString('en-GB', { month: 'long' }).toLocaleLowerCase();
 
 const requestUrl = "https://shumanskaya.github.io/aeroplan-menu/content.json";
 const request = new XMLHttpRequest();
@@ -11,13 +13,15 @@ request.onload = function () {
     const event = content.content[1];
 
     addMenu(menu, "food");
-    addEvents(event, "january");
+    addEvents(event, month);
 
     for (let i = 0; i < sectionNav.length; i++) {
         sectionNav[i].addEventListener("click", function (ev) {
             changeSection(ev, menu, event);
         })
     }
+
+    addactualDate(date);
 
 };
 
@@ -124,11 +128,23 @@ function addEvents(arr, positionName) {
             dateBlock.textContent = date;
             descBlock.textContent = desc;
             priceBlock.textContent = price;
-            // imgBlock.src = img;
+            imgBlock.src = img;
 
             eventTemplate.appendChild(clone);
         }
     } else {
         console.log("error with template")
+    }
+}
+
+function addactualDate(date) {
+    let month = date.toLocaleString('en-GB', { month: 'long' }).toLocaleLowerCase();
+    let dateNav = document.querySelector(".date__nav");
+    let months = dateNav.querySelectorAll(".section__nav__title");
+
+    for (let i = 0; i < months.length; i++) {
+        if (months[i].id === month) {
+            months[i].classList.add("section__nav__title--active");
+        }
     }
 }

@@ -1,8 +1,11 @@
 :root {
-    --primary: #D6B62B;
+    /* --primary: #D6B62B; */
+    --primary: #fff;
     --secondary: #AFCE2A;
-    --primary-dark: #D6802B;
-    --secondary-dark: #3F2C94;
+    /* --primary-dark: #D6802B; */
+    --primary-dark: #734a12;
+    /* --secondary-dark: #3F2C94; */
+    --secondary-dark: #86a339;
     --color-dark: #282626;
 }
 
@@ -25,29 +28,42 @@ a {
 
 .section {
     width: 100%;
+    background-color: lightgrey;
+}
+
+.section__wrap {
+    width: 70%;
     display: flex;
-    border-bottom: 2px solid var(--primary-dark);
+    margin: auto;
+    background-color: #fff;
+
+    border-bottom: 1em solid lightgray;
+    padding: 20px;
 }
 
 .section__nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto 20px;
-    /* border-bottom: 1px solid var(--primary-dark); */
+    margin-right: 20px;
+}
+
+.section__nav {
+    min-width: 30%;
+    height: fit-content;
+}
+
+.section__list {
+    min-width: 70%;
 }
 
 .section__nav__title {
-    width: 30%;
-    /* text-align: center; */
-    padding-bottom: 5px;
+    margin-bottom: 16px;
     color: var(--primary-dark);
+    cursor: pointer;
 }
 
 .section__nav__title--active {
     font-size: 1.5rem;
-    width: 50%;
-    border-bottom: 1px solid var(--primary-dark);
+    padding: 6px;
+    border: 1px solid;
 }
 
 .section__template {
@@ -62,8 +78,10 @@ a {
     width: 30%;
     font-size: 2em;
     padding: 20px 40px;
-    color: var(--secondary-dark);
+    color: #fff;
     text-align: right;
+
+    background-color: var(--primary-dark);
 }
 
 .section__block {
@@ -111,6 +129,7 @@ a {
 .slider {
     width: 100%;
     position: relative;
+    margin-bottom: 1em;
 }
 
 .slider__img {
@@ -198,6 +217,8 @@ a {
 .menu__list {
     margin: auto;
     width: 70%;
+
+    display: flex;
 }
 
 .menu__item {
@@ -236,11 +257,11 @@ a {
 .event {
     width: 70%;
     margin: auto;
+    display: flex;
 }
 
 .event__list {
     width: 100%;
-    margin: auto;
     padding: 5px;
 }
 
@@ -248,12 +269,12 @@ a {
     margin-bottom: 20px;
     border-bottom: 1px solid var(--primary);
     padding: 10px;
-    display: flex;
 }
 
 .event__img {
-    width: 20%;
+    width: 40%;
     margin-right: 20px;
+    float: left;
 }
 
 .event__title {
@@ -268,6 +289,10 @@ a {
 
 .event__desc {
     padding: 10px 0;
+}
+
+.event__details {
+    color: var(--secondary-dark);
 }
 
 /* STOCK */
@@ -301,8 +326,13 @@ a {
 
 /* MOBILE */
 @media screen and (max-width : 1024px) {
-    .section {
+    .section__wrap {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .section::after {
+        display: none;
     }
 
     .title {
@@ -313,6 +343,7 @@ a {
     .section__block {
         width: 100%;
         padding: 10px;
+        flex-direction: column;
     }
 
     /* HRADER */
@@ -350,8 +381,34 @@ a {
         transform: translate(-100%);
     }
 
-    /* FOOTER */ 
+    /*SLIDER*/
+
+    .slider__img {
+        height: 40vh;
+    }
+
+    /*EVENT*/
+
+    /* FOOTER */
     .footer {
         padding: 10px;
     }
 }
+
+/*Slider Animation*/
+/* @keyframes sliderImg {
+    0% {
+        background-image: url(image/РазливноеПиво.JPG);
+    }
+    50% {
+        background-image: url(image/Beer.JPG);
+    }
+    100% {
+        background-image: url(image/photo_2024-04-17_18-32-51.jpg);
+    }
+}
+
+.slider__img,
+.slider__img-back {
+    animation: sliderImg 20s infinite;
+} */
