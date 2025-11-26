@@ -132,24 +132,103 @@ a {
     margin-bottom: 1em;
 }
 
-.slider__img {
-    background-image: url(image/РазливноеПиво.JPG);
+/* SLIDER for animation */
+
+/* .slider {
     height: 60vh;
+} */
+
+/* .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    width: 100vw;
+    height: 60vh;
+    transition: opacity .5s ease-in;
+} */
+
+/* .slider__img {
+    height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
+} */
 
-.slider__img-back {
+/* .slider__img-back {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     filter: blur(7px);
     z-index: -1;
-    background-image: url(image/РазливноеПиво.JPG);
     background-size: cover;
+} */
+
+/* .slider__back {
+    position: absolute;
+    background-image: url(image/РазливноеПиво.JPG);
+    height: 100%;
+    background-size: cover;
+    filter: blur(7px);
+} */
+
+.slider__wrap {
+    width: 100%;
+    /* height: 60vh; */
+    display: grid;
+    grid-template-areas: 
+    "a b c f"
+    "a d e f";
+    gap: 10px;
+    background-color: lightgray;
 }
+
+.slider__block {
+    transition: all .2s ease .5s;
+}
+
+.slider__block:nth-child(1) {
+    grid-area: a;
+}
+.slider__block:nth-child(2) {
+    grid-area: b;
+}
+.slider__block:nth-child(3) {
+    grid-area: c;
+}
+.slider__block:nth-child(4) {
+    grid-area: d;
+}
+.slider__block:nth-child(5) {
+    grid-area: e;
+}
+.slider__block:nth-child(6) {
+    grid-area: f;
+}
+
+.slider__wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*slides background*/
+
+/* .slider .slide:nth-child(1) .slider__img,
+.slider .slide:nth-child(1) .slider__img-back {
+    background-image: url(image/РазливноеПиво.JPG);
+}
+
+.slider .slide:nth-child(2) .slider__img,
+.slider .slide:nth-child(2) .slider__img-back {
+    background-image: url(image/Beer.JPG);
+}
+
+.slider .slide:nth-child(3) .slider__img,
+.slider .slide:nth-child(3) .slider__img-back {
+    background-image: url(image/photo_2024-04-17_18-32-51.jpg);
+} */
 
 /*NAV*/
 .nav {
@@ -253,11 +332,24 @@ a {
     margin-left: auto;
 }
 
-/* POSTER */
+/* EVENT */
 .event {
     width: 70%;
     margin: auto;
     display: flex;
+}
+
+.date__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.date__nav .section__nav__title {
+    display: none;
+}
+
+.date__nav .date__nav--active {
+    display: block;
 }
 
 .event__list {
@@ -396,19 +488,3 @@ a {
 }
 
 /*Slider Animation*/
-/* @keyframes sliderImg {
-    0% {
-        background-image: url(image/РазливноеПиво.JPG);
-    }
-    50% {
-        background-image: url(image/Beer.JPG);
-    }
-    100% {
-        background-image: url(image/photo_2024-04-17_18-32-51.jpg);
-    }
-}
-
-.slider__img,
-.slider__img-back {
-    animation: sliderImg 20s infinite;
-} */

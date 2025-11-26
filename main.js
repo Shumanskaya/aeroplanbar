@@ -145,6 +145,47 @@ function addactualDate(date) {
     for (let i = 0; i < months.length; i++) {
         if (months[i].id === month) {
             months[i].classList.add("section__nav__title--active");
+            months[i].classList.add("date__nav--active");
+            if (i === 10) {
+                months[i].style.order = "-1";
+                months[11].classList.add("date__nav--active");
+                months[11].style.order = "-1";
+                months[0].classList.add("date__nav--active");
+            } else if (i === 11) {
+                months[i].style.order = "-1";
+                months[0].classList.add("date__nav--active");
+                months[1].classList.add("date__nav--active");
+            } else {
+                months[i+1].classList.add("date__nav--active");
+                months[i+2].classList.add("date__nav--active");
+            }
         }
     }
 }
+
+let slider = document.querySelector('.slider');
+let sliders = slider.querySelectorAll(".slide");
+
+// function slideAnimation(active) {
+//     if (active !== sliders.length-1) {
+//         sliders[active].classList.remove("slide--active");
+//         active += 1;
+//         sliders[active].classList.add("slide--active");
+
+//         setInterval(() => {
+//             slideAnimation(active);
+//         }, 5000)
+//     } else {
+//         sliders[active].classList.remove("slide--active");
+//         active = 0;
+//         sliders[active].classList.add("slide--active");
+//         setInterval(() => {
+//             slideAnimation(active);
+//         }, 5000)
+//     }
+// }
+
+
+// setInterval(() => {
+//     slideAnimation(0);
+// }, 5000)
