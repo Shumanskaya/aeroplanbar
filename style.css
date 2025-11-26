@@ -128,7 +128,7 @@ a {
 /* SLIDER */
 .slider {
     width: 100%;
-    position: relative;
+    /* position: relative; */
     margin-bottom: 1em;
 }
 
@@ -471,6 +471,29 @@ a {
     .nav__section {
         opacity: 0;
         transform: translate(-100%);
+    }
+
+    .nav__section.open {
+        opacity: 1;
+        transform: translate(0%);
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+
+    .nav__section.open .nav__btn-mobile-close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #282626;
+        right: 10px;
+        top: 10px;
     }
 
     /*SLIDER*/

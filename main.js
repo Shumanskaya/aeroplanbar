@@ -189,3 +189,19 @@ let sliders = slider.querySelectorAll(".slide");
 // setInterval(() => {
 //     slideAnimation(0);
 // }, 5000)
+
+let btnMobile = document.querySelector('.nav__btn-mobile');
+btnMobile.addEventListener("click", function() {
+    let nav = document.querySelector('.nav__section');
+    nav.classList.add("open");
+    let btnClose = nav.querySelector('.nav__btn-mobile-close');
+    btnClose.addEventListener("click", function() {
+        nav.classList.remove("open");
+    })
+    let navTitle = nav.querySelectorAll('.nav__title');
+    for(let i = 0; i < navTitle.length; i++) {
+        navTitle[i].addEventListener('click', function() {
+            nav.classList.remove("open");
+        })
+    }
+})
