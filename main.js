@@ -32,9 +32,13 @@ function changeSection(section, menu, event) {
     changeBlockMenu(element, parent);
 
     if (parent.id === "menu") {
-        addMenu(menu, element.id);
+        if (!element.classList.contains("section__nav__title--active")) {
+            addMenu(menu, element.id);
+        }
     } else if (parent.id === "event") {
-        addEvents(event, element.id);
+        if (!element.classList.contains("section__nav__title--active")) {
+            addEvents(event, element.id);
+        }
     }
     changeMenu(element, parent);
 };
@@ -57,6 +61,7 @@ function changeBlockMenu(element, parent) {
 function addMenu(arr, positionName) {
     let menu;
     let menuId;
+
     for (let i = 0; i < arr.section.length; i++) {
         if (arr.section[i].name === positionName) {
             menu = arr.section[i].menu;
@@ -156,8 +161,8 @@ function addactualDate(date) {
                 months[0].classList.add("date__nav--active");
                 months[1].classList.add("date__nav--active");
             } else {
-                months[i+1].classList.add("date__nav--active");
-                months[i+2].classList.add("date__nav--active");
+                months[i + 1].classList.add("date__nav--active");
+                months[i + 2].classList.add("date__nav--active");
             }
         }
     }
@@ -191,16 +196,16 @@ let sliders = slider.querySelectorAll(".slide");
 // }, 5000)
 
 let btnMobile = document.querySelector('.nav__btn-mobile');
-btnMobile.addEventListener("click", function() {
+btnMobile.addEventListener("click", function () {
     let nav = document.querySelector('.nav__section');
     nav.classList.add("open");
     let btnClose = nav.querySelector('.nav__btn-mobile-close');
-    btnClose.addEventListener("click", function() {
+    btnClose.addEventListener("click", function () {
         nav.classList.remove("open");
     })
     let navTitle = nav.querySelectorAll('.nav__title');
-    for(let i = 0; i < navTitle.length; i++) {
-        navTitle[i].addEventListener('click', function() {
+    for (let i = 0; i < navTitle.length; i++) {
+        navTitle[i].addEventListener('click', function () {
             nav.classList.remove("open");
         })
     }
