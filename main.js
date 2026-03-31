@@ -168,8 +168,8 @@ function addactualDate(date) {
     }
 }
 
-let slider = document.querySelector('.slider');
-let sliders = slider.querySelectorAll(".slide");
+// let slider = document.querySelector('.slider');
+// let sliders = slider.querySelectorAll(".slide");
 
 // function slideAnimation(active) {
 //     if (active !== sliders.length-1) {

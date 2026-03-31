@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #f5f2f2;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.menu_print {
+    width: 148mm;
+    height: 210mm;
+    padding: 5mm;
+    background-color: rgb(31, 30, 30);
+    margin-bottom: 10px;
+}
+
+.title {
+    background-color: #f5f2f2;
+    margin: 20px -20px 5px;
+    padding: 2px 20px;
+}
+
+.title p {
+    color: rgb(31, 30, 30);
+}
+
+.food {
+    margin-bottom: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.food_name {
+    /* width: 70%; */
+    flex-grow: 1;
+}
+
+.food_name {
+    font-size: 25px;
+}
+
+.dots {
+    border-bottom: 1px dashed white;
+    flex-grow: 20;
+    margin-top: 5px;
+}
+
+.food_price {
+    font-size: 20px;
+    /* width: 20%; */
+    text-align: right;
+    flex-grow: 1;
+}
+
+.food_desc {
+    width: 65%;
+    font-size: 14px;
+}
