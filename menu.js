@@ -7,6 +7,17 @@ request.onload = function () {
     const content = request.response;
     const menu = content.content[0];
 
+    function addGridArea() {
+        let blocks = document.querySelectorAll('.menu__block');
+
+        for (let i = 0; i < blocks.length; i++) {
+            let section = blocks[i].querySelector('.section');
+            let gridAreaName = section.id;
+            blocks[i].style.gridArea = gridAreaName;
+        }
+    }
+
+    // addGridArea();
 
     function addMenu(arr) {
         let menu = arr.section;
@@ -47,5 +58,5 @@ request.onload = function () {
         }
     }
 
-    addMenu(menu)
+    addMenu(menu);
 };

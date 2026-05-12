@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #f5f2f2;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.menu_print {
+    width: 297mm;
+    height: 210mm;
+    padding: 5mm;
+    background-color: rgb(31, 30, 30);
+    margin-bottom: 10px;
+    /* display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 94.65mm);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: 
+        "cold-dishes hot-dishes food"
+        "cold-dishes hot-dishes food"
+        "cold-dishes hot-dishes food"
+        "cold-dishes hot-dishes food"
+        "cold-dishes hot-dishes ."
+        "home-sauce hot-dishes salad"
+        "home-sauce hot-dishes salad"
+        "home-sauce . ."
+        "home-sauce . ."
+        ". . ."; */
+}
+
+.logo {
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+
+.menu_container {
+    display: flex;
+    gap: 5px;
+}
+
+.column {
+    width: 95.6mm;
+}
+
+.menu__block {
+    width: 100%;
+    margin-left: auto;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.title {
+    /* border-top: 4px solid #f5f2f2; */
+    border-bottom: 2px solid #f5f2f2;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.title p {
+    text-align: center;
+}
+
+.food {
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food_name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.dots {}
+
+.food_price {
+    font-size: 18px;
+    text-align: right;
+}
+
+.food_desc {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.menu__photo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.image {
+    width: 89px;
+    object-fit: cover;
+}
+
+.qr__block {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.qr {
+    width: 100px;
+    object-fit: contain;
+}
+
+.qr__text {
+    text-align: center;
+    font-size: 12px;
+}
+
+.social {
+    position: absolute;
+    width: 20px;
+}
+
+.arrow {
+    position: absolute;
+    width: 45px;
+}
+
+.social--vk {
+    left: 130px;
+    top: 5px;
+}
+
+.arrow--vk {
+    left: 97px;
+    top: -3px;
+    transform: rotate(200deg);
+}
+
+.social--tg {
+    bottom: 6px;
+    right: 125px;
+}
+
+.arrow--tg {
+    bottom: -1px;
+    right: 99px;
+    transform: rotate(22deg);
+}
